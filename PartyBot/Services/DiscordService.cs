@@ -92,7 +92,11 @@ namespace PartyBot.Services
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandler>()
                 .AddSingleton<LavaNode>()
-                .AddSingleton(new LavaConfig())
+                .AddSingleton(new LavaConfig { 
+                    Hostname = "lava.link",
+                    Port = 80,
+                    SelfDeaf = false
+                })
                 .AddSingleton<LavaLinkAudio>()
                 .AddSingleton<BotService>()
                 .AddSingleton<GlobalData>()
